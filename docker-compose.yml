@@ -1,0 +1,12 @@
+version: "2.4"
+services:
+    recorder:
+        build: .
+        volumes:
+            - .:/var/motion/
+        ports:
+            - "8080:8080"
+            - "8081:8081"
+        devices: 
+            - "/dev/video4:/dev/video0"
+        restart: unless-stopped
