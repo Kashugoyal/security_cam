@@ -17,3 +17,4 @@ services:
             - ./recordings:/srv:rw
         ports:
             - "5050:80"
+        restart: unless-stopped
