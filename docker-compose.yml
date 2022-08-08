@@ -10,3 +10,10 @@ services:
         devices: 
             - "/dev/video4:/dev/video0"
         restart: unless-stopped
+
+    browser:
+        image: filebrowser/filebrowser
+        volumes: 
+            - ./recordings:/srv:rw
+        ports:
+            - "5050:80"
