@@ -9,6 +9,7 @@ services:
             - "8081:8081"
         devices: 
             - "/dev/video4:/dev/video0"
+        command: motion -n -c /var/motion/motion.conf
         restart: unless-stopped
 
     browser:
